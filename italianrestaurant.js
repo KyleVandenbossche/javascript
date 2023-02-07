@@ -1,13 +1,13 @@
 const prompt = require('prompt-sync')();
 
-const price = 0;
+let price = 0;
 
 
 askAboutPizza();
 
 function askAboutPizza() {
     const size = prompt("What size pizza would you like? (small, medium, or large)");
-    let price;
+    let price = 0;
     
     switch (size) {
       case "small":
@@ -32,7 +32,7 @@ askAboutSalad();
 
 function askAboutSalad() {
     const saladsize = prompt("What size salad would you like? (small or large)");
-    let price;
+    let price = 0;
     
     switch (saladsize) {
       case "small":
@@ -49,23 +49,24 @@ function askAboutSalad() {
   }
 }
 
-askAboutDelivery();
+
 
 function askAboutDelivery() {
-    const size = prompt("Would you like delivery? (yes or no))");
-    let price;
+    const size = prompt("Would you like delivery? (yes or no)");
+    let price = 0;
     
 
     if (size === 'yes'){
         const address = prompt("What is your address?")
         price = price+10
-        console.log(price);
 
     } else {
         return;
     };
 
     }
+
+    console.log(askAboutDelivery(price));
 
  
     

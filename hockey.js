@@ -1,13 +1,14 @@
 var prompt = require('prompt-sync')();
 
+
+
 function getRandomDirection(){
     return Math.random() < 0.5 ? 'High' : 'Low';
-
 }
 
 
 
-function shoot(playerss){
+function shoot(i){
 const onshoot = prompt(`Player ${player}, or shoot low? (H or L)`)
 
 if (onshoot === getRandomDirection()){
