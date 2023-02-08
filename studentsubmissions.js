@@ -10,35 +10,42 @@ const studentSubmissions = [
 
 
 
-// #2
-function addSubmission(array, newName, newScore, newDate) {
-    let submission = { name: newName, score: newScore, date: newDate };
-    array.push(submission);
-}
+// // #2
+// function addSubmission(array, newName, newScore, newDate) {
+//     let submission = { name: newName, score: newScore, date: newDate };
+//     array.push(submission);
+//     return submission;
+// }
 
-console.log(addSubmission(studentSubmissions, 'Kyle', 100, '03-19-2023'));
+// console.log(addSubmission(studentSubmissions, 'Kyle', 100, '03-19-2023'));
 
 
-// #3
-function deleteSubmissionByIndex(array, index){
-//     // Declare a function named deleteSubmissionByIndex
-// Parameter(s): array, index
-// Functionality: remove an object from the array at the specified index using the splice method.
-// 
-}
+// // #3
+// function deleteSubmissionByIndex(array, index){
+// //  Functionality: remove an object from the array at 
+// // the specified index using the splice method.
+// }
 
 
 
 
 // #4 
 function deleteSubmissionByName(array, index){
-//     Declare a function named deleteSubmissionByName
-// Parameter(s): array, name
-// Functionality: remove the object from the array that has the provided name.  Incorporate the findIndex method and the splice method.
-
+    return array.splice(index, 1);
+    
+// Functionality: remove the object from the array
+// that has the provided name.  Incorporate the findIndex 
+// method and the splice method.
 
 }
 
+console.log(studentSubmissions);
+console.log(deleteSubmissionByName(studentSubmissions, 'jane'))
+// console.log(studentSubmissions, );
+
+
+
+/*
 // #5
 
 function editSubmission(array, index, score) {
@@ -46,6 +53,8 @@ function editSubmission(array, index, score) {
     return array;
   }
 
+
+// # 6
 function findSubmissionByName(array, name){
     return array.find((item)=> item.name === name);
 /*
@@ -55,7 +64,19 @@ function findSubmissionByName(array, name){
         }
         
     }
-    return "Student not Found";*/
+    return "Student not Found";
 }
 
 console.log(findSubmissionByName(studentSubmissions, "Jane"))
+*/
+
+
+// #7 
+
+function findLowestScore(){
+    for (let i = 0; i <= studentSubmissions; i++)
+        if(array.score === min)
+        return array;
+}
+
+findLowestScore();
