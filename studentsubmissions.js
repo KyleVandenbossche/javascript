@@ -7,76 +7,102 @@ const studentSubmissions = [
 ];
 
 
-
-
-
 // // #2
 // function addSubmission(array, newName, newScore, newDate) {
-//     let submission = { name: newName, score: newScore, date: newDate };
+//     let submission = { name: newName, score: newScore, date: newDate, passed: newScore >=60 };
 //     array.push(submission);
 //     return submission;
+
+//     // cleaner way to write this
+//     // // array.push({
+//     //     name: newName,
+//     //     score: newScore,
+//     //     date: newDate,
+//     //     passed: newScore >= 60
+//     // })
+
 // }
 
 // console.log(addSubmission(studentSubmissions, 'Kyle', 100, '03-19-2023'));
 
-
-// // #3
+// // index : 0, 1, 2, 3, 4, 5
+// // // #3
 // function deleteSubmissionByIndex(array, index){
-// //  Functionality: remove an object from the array at 
-// // the specified index using the splice method.
+//     array.splice(index, 1) // 1 entry, you can use any number here for quantity
 // }
 
+// deleteSubmissionByIndex(studentSubmissions, 2);
 
 
 
-// #4 
-function deleteSubmissionByName(array, index){
-    return array.splice(index, 1);
+
+// // #4 
+// function deleteSubmissionByName(array, name){
     
-// Functionality: remove the object from the array
-// that has the provided name.  Incorporate the findIndex 
-// method and the splice method.
+//     const index = array.findIndex(studentSubmissions => studentSubmissions.name === name);
 
-}
+//     deleteSubmissionByIndex(array, index)
 
-console.log(studentSubmissions);
-console.log(deleteSubmissionByName(studentSubmissions, 'jane'))
-// console.log(studentSubmissions, );
+// }
+
+// console.log(studentSubmissions)
+// deleteSubmissionByName(studentSubmissions, 'Jack');
+// console.log(studentSubmissions)
 
 
-
-/*
 // #5
 
-function editSubmission(array, index, score) {
-    array[index].score = score;
-    return array;
+// function editSubmission(array, index, score) {
+//     const submission = array[index];
+//     array[index].score = score;
+//     array[index].passed = score >= 60;
+//   }
+
+  function findSubmissionByName(array, name){
+    const submission = array.find(submission => submission.name === name);
   }
 
+  const found = findSubmissionByName(studentsubmissions, 'jack')
+  console.log(found)
 
-// # 6
-function findSubmissionByName(array, name){
-    return array.find((item)=> item.name === name);
-/*
-    for (let item of array){
-        if(item.name === name){     // this is the same code
-            return item;            // this is the same code
+
+function findLowestScore(array){
+    let lowest = array[0]; // assign first item in array to the lowest, because technically it's the lowest theres only 1 start
+    array.forEach(studentSubmissions => {
+        if (studentSubmissions.score < lowest.score){
+            lowest = studentSubmissions;
         }
-        
+    });
+    return lowest; 
+}
+console.log(findLowestScore(studentSubmissions));
+
+
+
+function findAverageScore(array){
+
+    let total = 0;
+
+    for (const submission of array) {
+        total = total + submission.score
     }
-    return "Student not Found";
+
+    return total / array.length
 }
 
-console.log(findSubmissionByName(studentSubmissions, "Jane"))
-*/
+console.log(findAverageScore(studentSubmissions));
 
 
-// #7 
-
-function findLowestScore(){
-    for (let i = 0; i <= studentSubmissions; i++)
-        if(array.score === min)
-        return array;
+function filterPassing(array){
+    return array.filter(studentSubmissions => studentSubmissions.passed === true)
 }
 
-findLowestScore();
+console.log(filterPassing(studentSubmissions));
+
+
+function filter90AndAbove(array){
+    return array.filter(studentSubmissions => studentSubmissions.score >= 90);
+}
+
+console.log(filter90AndAbove(studentSubmissions));
+
