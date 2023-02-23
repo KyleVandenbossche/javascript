@@ -41,27 +41,45 @@ form{
     margin-top: 100px;
 }
 
-#coin{
-    width:50px;
-    height:50px;
-    border: 2px solid lightgrey;
-    border-radius:100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-}
 
-.coin p{
-    font-size: 9px'
-}
 
-div{
-    width:50px;
-    height:50px;
-    border: 2px solid lightgrey;
+
+.penny{
+    width:70px;
+    height:70px;
+    border: 2px solid chocolate;
     border-radius:100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+.nickle{
+    width:100px;
+    height:100px;
+    border: 2px solid lightgrey;
+    border-radius:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dime{
+    width:60px;
+    height: 60px;
+    border: 2px solid lightgrey;
+    border-radius:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.quarter{
+    width:150px;
+    height:150px;
+    border: 2px solid lightgrey;
+    border-radius:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
