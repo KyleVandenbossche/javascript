@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div id="buttons-container">
+    <button>Button 1</button>
+    <button>Button 2</button>
+</div>
+<script>
+
+    const allButtons = document.querySelectorAll('button');
+    const buttonsContainer = document.getElementById('buttons-container');
+
+    // for(let button of allButtons){
+    //     button.addEventListener("click", (event) => {
+    //         console.log(event.target)
+    //     });
+    // }
+
+    const newButton = document.createElement('button');
+    newButton.innerText = 'New-Button';
+
+    buttonsContainer.addEventListener('click', (event) =>{
+        console.log(event.target)
+    });
+    
+
+    
+    newButton.innerText = 'New Button'
+    buttonsContainer.append(newButton)
+
+</script>
+
+
+
+</body>
+</html>
